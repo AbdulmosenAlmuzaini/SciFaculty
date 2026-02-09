@@ -11,8 +11,7 @@ const NITTER_INSTANCES = [
     'https://nitter.cz',
     'https://nitter.mint.lgbt',
     'https://nitter.daura.pw',
-    'https://nitter.projectsegfau.lt',
-    'https://nitter.okf.sh'
+    'https://nitter.projectsegfau.lt'
 ];
 
 function getMockTweets(username) {
