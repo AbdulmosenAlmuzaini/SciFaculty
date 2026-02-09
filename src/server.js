@@ -11,7 +11,15 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Basic Dashboard Protection
+app.use(cors());
+app.use(express.json());
+
+// Public health check for Railway
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
+// Basic Dashboard Protection (applied after public routes)
 const adminUser = process.env.ADMIN_USER || 'admin';
 const adminPass = process.env.ADMIN_PASS || 'password';
 
@@ -20,9 +28,6 @@ app.use(basicAuth({
     challenge: true,
     realm: 'Twitter Monitor Admin',
 }));
-
-app.use(cors());
-app.use(express.json());
 
 // Serve Static Dashboard Files
 app.use(express.static(path.join(__dirname, '../dashboard')));
