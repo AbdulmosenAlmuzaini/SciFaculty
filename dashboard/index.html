@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم رصد الأخبار</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>لوحة رصد الأخبار (تويتر)</h1>
+            <div class="status-badge" id="bot-status">متصل</div>
+        </header>
+
+        <main>
+            <section class="tweet-list-container">
+                <div class="section-header">
+                    <h2>الأخبار المرصودة مؤخراً</h2>
+                    <button id="refresh-btn" class="btn secondary">تحديث</button>
+                </div>
+                <div id="tweet-list" class="tweet-list">
+                    <!-- Tweets will be loaded here -->
+                    <div class="loading">جاري التحميل...</div>
+                </div>
+            </section>
+
+            <section class="preview-container" id="preview-panel">
+                <div class="preview-placeholder">
+                    <p>اختر خبراً للمعاينة</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for copying / previewing -->
+    <div id="toast" class="toast">تم النسخ بنجاح!</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
