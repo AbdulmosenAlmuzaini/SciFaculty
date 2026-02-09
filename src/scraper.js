@@ -5,12 +5,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const NITTER_INSTANCES = [
-    'https://nitter.kavin.rocks',
-    'https://nitter.nixnet.services',
-    'https://nitter.vxempire.xyz',
-    'https://nitter.namazso.eu',
-    'https://nitter.privacydev.net',
-    'https://nitter.net'
+    'https://nitter.poast.org',
+    'https://nitter.rawbit.ninja',
+    'https://nitter.perennialte.ch',
+    'https://nitter.cz',
+    'https://nitter.mint.lgbt',
+    'https://nitter.daura.pw',
+    'https://nitter.projectsegfau.lt',
+    'https://nitter.okf.sh'
 ];
 
 function getMockTweets(username) {
